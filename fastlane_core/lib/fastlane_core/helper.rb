@@ -68,7 +68,7 @@ module FastlaneCore
 
     # Logs base directory
     def self.buildlog_path
-      return ENV["FL_BUILDLOG_PATH"] || "~/Library/Logs"
+      return File.expand_path(ENV["FL_BUILDLOG_PATH"] || "~/Library/Logs")
     end
 
     # All Xcode Related things
